@@ -22,7 +22,7 @@ export default defineConfig({
       '@': resolve(projectRoot, 'src')
     }
   },
-  base: '/',
+  base: process.env.NODE_ENV === 'production' ? '/PDF-tool/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
